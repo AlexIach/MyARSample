@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ARActivity"
+    >
+
+  <com.google.android.material.appbar.AppBarLayout
+      android:id="@+id/appbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintTop_toTopOf="parent"
+      >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        />
+  </com.google.android.material.appbar.AppBarLayout>
+
+
+  <!--<HorizontalScrollView
+      android:id="@+id/horizontal_scroll_view"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/appbar"
+      app:layout_constraintBottom_toTopOf="@id/sceneform_ux_fragment"
+      >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        >
+
+      <ImageView
+          android:id="@+id/person1"
+          android:layout_width="100dp"
+          android:layout_height="wrap_content"
+          android:src="@drawable/bear"
+          />
+
+      <ImageView
+          android:id="@+id/person2"
+          android:layout_width="100dp"
+          android:layout_height="wrap_content"
+          android:src="@drawable/cat"
+          />
+
+      <ImageView
+          android:id="@+id/person3"
+          android:layout_width="100dp"
+          android:layout_height="wrap_content"
+          android:src="@drawable/elephant"
+          />
+
+    </LinearLayout>
+
+  </HorizontalScrollView>-->
+  <!--    <androidx.fragment.app.FragmentContainerView
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          android:id="@+id/sceneform_fragment"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />-->
+
+  <fragment
+      android:id="@+id/sceneform_ux_fragment"
+      android:name="com.google.ar.sceneform.ux.ArFragment"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/appbar"
+      />
+
+
+  <Button
+      android:id="@+id/deAttachButton"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      android:text="Detach model"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
